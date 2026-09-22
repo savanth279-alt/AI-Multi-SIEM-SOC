@@ -46,4 +46,41 @@ The project implements equivalent security detections in **KQL and SPL**, maps d
 * AI / LLM
 
 > All attack simulations will be performed only in an authorized lab environment.
+## Architecture
 
+The project follows this SOC workflow:
+
+Attack Simulation
+       ↓
+Windows / Sysmon / Entra ID
+       ↓
+Security Logs
+       ↓
+Microsoft Sentinel + Splunk
+       ↓
+KQL + SPL Detection
+       ↓
+Alerts
+       ↓
+Python SOC Engine
+       ↓
+Alert Enrichment
+       ↓
+AI Investigation Assistant
+       ↓
+SOC Analyst
+       ↓
+Response
+       ↓
+Incident Report
+
+### Core Components
+
+- Microsoft Sentinel - SIEM, detection, investigation, and automation
+- Splunk - SIEM, SPL detection, alerting, and dashboards
+- Windows - Endpoint security telemetry
+- Sysmon - Detailed process and network telemetry
+- Microsoft Entra ID - Identity and authentication telemetry
+- Python - API integration, enrichment, and correlation
+- AI - Alert analysis and incident summarization
+- MITRE ATT&CK - Attack technique mapping
