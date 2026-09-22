@@ -48,42 +48,7 @@ The project implements equivalent security detections in **KQL and SPL**, maps d
 > All attack simulations will be performed only in an authorized lab environment.
 ## Architecture
 
-```text
-Attack Simulation
-        |
-        v
-Windows / Sysmon / Entra ID
-        |
-        v
-Security Logs
-        |
-        v
-Microsoft Sentinel + Splunk
-        |
-        v
-KQL + SPL Detection
-        |
-        v
-Alerts
-        |
-        v
-Python SOC Engine
-        |
-        v
-Alert Enrichment
-        |
-        v
-AI Investigation Assistant
-        |
-        v
-SOC Analyst
-        |
-        v
-Response
-        |
-        v
-Incident Report
-
+![SOC Architecture](architecture.png)
 ### Core Components
 
 - Microsoft Sentinel - SIEM, detection, investigation, and automation
